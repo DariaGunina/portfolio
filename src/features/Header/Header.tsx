@@ -6,7 +6,9 @@ export const Header = () => {
   return (
     <div className={styles.container}>
       <Logo />
-      <p className={styles.text}>тел. 89375679999</p>
+      <a href="tel:89375679999" className={styles.text}>
+        тел. 89375679999
+      </a>
     </div>
   );
 };

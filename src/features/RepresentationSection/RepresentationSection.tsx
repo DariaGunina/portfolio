@@ -8,18 +8,15 @@ export const RepresentationSection = () => {
     <>
       <div className={styles.container}>
         <div className={styles.content}>
-          <h1 className={styles.title}>
-            Привет,
-            <br />
-            меня зовут Вика
-          </h1>
+          <p className={styles.title}>Привет,</p>
+          <p className={styles.title}>меня зовут Вика</p>
           <p className={styles.text}>Фотограф, увлекающий и увлекающийся</p>
         </div>
       </div>
-      <h1 className={styles.header}>Обо мне</h1>
+      <p className={styles.header}>Обо мне</p>
       <div className={styles.block}>
         <div className={styles.infoBlock}>
-          <h1 className={styles.name}>Несколько слов обо мне</h1>
+          <p className={styles.name}>Несколько слов обо мне</p>
           <p className={styles.info}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.

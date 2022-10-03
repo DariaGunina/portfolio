@@ -1,6 +1,5 @@
 .container {
   background-image: url('./image.jpg');
-  height: 360px;
   background-size: 100%;
   background-position: center;
   position: relative;
@@ -33,11 +32,13 @@
 }
 
 .content {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  width: 400px;
-  bottom: 70px;
-  left: 50px;
+  width: 410px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
 }
 
 .header {
@@ -47,7 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 40px 0 40px;
+  margin: 30px 0 30px;
 }
 
 .block {
