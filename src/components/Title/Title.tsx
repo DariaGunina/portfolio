@@ -1,9 +1,9 @@
 import styles from "./Title.module.css";
 
 interface Props {
-  title: string;
+  name: string;
 }
 
-export const Title = ({ title }: Props) => (
-  <p className={styles.title}>{title}</p>
+export const Title = ({ name }: Props) => (
+  <h2 className={styles.title}>{name}</h2>
 );

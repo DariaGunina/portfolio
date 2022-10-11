@@ -14,7 +14,7 @@ export const RepresentationSection = () => {
           <p className={styles.text}>Фотограф, увлекающий и увлекающийся</p>
         </div>
       </div>
-      <Title title="Обо мне" />
+      <Title name="Обо мне" />
       <div className={styles.block}>
         <div className={styles.infoBlock}>
           <p className={styles.name}>Несколько слов обо мне</p>

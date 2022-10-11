@@ -54,7 +54,7 @@ export const photos = [
   }
 ];
 
-export const alboms = [
+export const albums = [
   {
     photo: photo1,
     text: "Дети"

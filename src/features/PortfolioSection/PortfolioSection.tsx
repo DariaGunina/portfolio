@@ -6,7 +6,7 @@ import { photos } from "../../constants";
 export const PortfolioSection = () => {
   return (
     <>
-      <Title title="Фото" />
+      <Title name="Фото" />
       <PhotoGallery photos={photos} />
     </>
   );

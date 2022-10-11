@@ -1,6 +1,5 @@
 import Link from "next/link";
 import LogoImg from "../../assets/logo.svg";
-import { Title } from "../Title";
 
 import styles from "./Logo.module.css";
 

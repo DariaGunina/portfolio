@@ -1,7 +1,8 @@
 import Link from "next/link";
+import React from "react";
 import { Image } from "../../components/Image";
 import { Title } from "../../components/Title";
-import { alboms } from "../../constants";
+import { albums } from "../../constants";
 import { ALBOM_PAGE } from "../../routs";
 
 import styles from "./AlbumsSection.module.css";
@@ -9,10 +10,10 @@ import styles from "./AlbumsSection.module.css";
 export const AlbumsSection = () => {
   return (
     <>
-      <Title title="Альбомы" />
+      <Title name="Альбомы" />
       <Link href={ALBOM_PAGE}>
         <div className={styles.container}>
-          {alboms.map((item) => (
+          {albums.map((item) => (
             <div key={item.text}>
               <Image
                 imageClassName={styles.image}

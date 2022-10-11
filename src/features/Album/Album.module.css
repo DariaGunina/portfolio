@@ -25,27 +25,23 @@
   margin-right: auto;
 }
 
-.buttonContainer {
+.box {
   display: flex;
-  margin: 25px 0 25px;
-  justify-content: flex-end;
-}
-
-.button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 15px;
-  background-color: var(--bright-color);
-  color: var(--main-color);
+  align-items: center;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
-.button:active {
-  background: var(--lighter-color);
-  transform: translate(0em, 0.75em);
+.icon {
+  fill: var(--bright-color);
+  transform: rotate(180deg);
+  width: 16px;
+  height: 16px;
 }
 
-.button:active::before {
-  box-shadow: 0 0 0 2px var(--lighter-color);
-  transform: translate3d(0, 0, -0.85em);
+.name {
+  color: var(--bright-color);
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 10px;
 }
