@@ -1,0 +1,51 @@
+.imageWrapper {
+  width: 320px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.photoBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photo {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.container {
+  width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonContainer {
+  display: flex;
+  margin: 25px 0 25px;
+  justify-content: flex-end;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--bright-color);
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.button:active {
+  background: var(--lighter-color);
+  transform: translate(0em, 0.75em);
+}
+
+.button:active::before {
+  box-shadow: 0 0 0 2px var(--lighter-color);
+  transform: translate3d(0, 0, -0.85em);
+}

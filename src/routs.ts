@@ -1,0 +1,1 @@
+export const ALBOM_PAGE = "/albom-page";
