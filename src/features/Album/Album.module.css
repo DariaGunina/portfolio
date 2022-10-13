@@ -1,0 +1,47 @@
+.imageWrapper {
+  width: 320px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.photoBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photo {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.container {
+  width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.icon {
+  fill: var(--bright-color);
+  transform: rotate(180deg);
+  width: 16px;
+  height: 16px;
+}
+
+.name {
+  color: var(--bright-color);
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 10px;
+}

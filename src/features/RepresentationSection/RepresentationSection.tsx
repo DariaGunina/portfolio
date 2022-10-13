@@ -2,6 +2,7 @@ import { Image } from "../../components/Image";
 import avatar from "../../assets/avatar.jpg";
 
 import styles from "./RepresentationSection.module.css";
+import { Title } from "../../components/Title";
 
 export const RepresentationSection = () => {
   return (
@@ -13,7 +14,7 @@ export const RepresentationSection = () => {
           <p className={styles.text}>Фотограф, увлекающий и увлекающийся</p>
         </div>
       </div>
-      <p className={styles.header}>Обо мне</p>
+      <Title name="Обо мне" />
       <div className={styles.block}>
         <div className={styles.infoBlock}>
           <p className={styles.name}>Несколько слов обо мне</p>
