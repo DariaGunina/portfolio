@@ -1,25 +1,40 @@
-import Head from "next/head";
-import { Header } from "../Header";
 import { RepresentationSection } from "../RepresentationSection";
 import { PortfolioSection } from "../PortfolioSection";
 import { AlbumsSection } from "../AlbumsSection";
+import { StepsSection } from "../StepsSection";
 
 import styles from "./Home.module.css";
 
-export const Home = () => {
-  return (
-    <>
-      <Head>
-        <title>Portfolio</title>
-        <meta name="description" content="" />
-      </Head>
+interface Props {
+  photos: [{ _id: number; preview: string; title: string }];
+  gallery: [];
+  information: [
+    {
+      phone: string;
+      greetings: string;
+      textGreetings: string;
+      selfRepresentation: string;
+      mail: string;
+      steps: [
+        {
+          title: string;
+          text: string;
+          key: number;
+        }
+      ];
+      city: string;
+      region: string;
+    }
+  ];
+}
 
-      <main className={styles.container}>
-        <Header />
-        <RepresentationSection />
-        <PortfolioSection />
-        <AlbumsSection />
-      </main>
-    </>
+export const Home = ({ photos, gallery, information }: Props) => {
+  return (
+    <div className={styles.container}>
+      <RepresentationSection information={information} />
+      <PortfolioSection gallery={gallery} />
+      <AlbumsSection photos={photos} />
+      <StepsSection information={information} />
+    </div>
   );
 };

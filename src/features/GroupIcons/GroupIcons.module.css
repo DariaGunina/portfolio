@@ -1,0 +1,19 @@
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--light-color);
+  margin: 0 3px;
+}
+
+.differentIcon {
+  width: 30px;
+  height: 30px;
+  fill: var(--icon-color);
+  margin: 0 2px;
+}
+
+@media (min-width: 280px) and (max-width: 1220px) {
+  .icons {
+    margin-bottom: 5px;
+  }
+}

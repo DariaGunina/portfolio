@@ -2,33 +2,44 @@
   background-image: url('./image.jpg');
   background-size: 100%;
   background-position: center;
-  position: relative;
+  padding: 45px;
 }
 
-.container:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-  z-index: 0;
-	background-color:rgba(0, 0, 0, .5);
+@media (min-width: 280px) and (max-width: 1220px) {
+  .container {
+    background-size: 200%;
+    padding: 20px;
+  }
 }
 
 .title {
-  color: var(--text-color);
+  color: var(--light-color);
   margin: 0;
   font-size: 40px;
   font-weight: 300;
-  margin-bottom: 10px;
+}
+
+@media (min-width: 280px) and (max-width: 1220px) {
+  .title {
+    font-size: 28px;
+    margin-bottom: 0;
+  }
 }
 
 .text {
-  color: var(--text-color);
+  color: var(--light-color);
   font-size: 24px;
   font-weight: 300;
   margin-top: 30px;
+  margin-bottom: 40px;
+  line-height: 32px;
+}
+
+@media (min-width: 280px) and (max-width: 1220px) {
+  .text {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .content {
@@ -38,11 +49,17 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 50px;
+}
+
+@media (min-width: 280px) and (max-width: 1220px) {
+  .content {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .header {
-  color: var(--main-color);
+  color: var(--dark-color);
   font-size: 20px;
   font-weight: 400;
   display: flex;
@@ -56,28 +73,54 @@
   justify-content: space-between;
 }
 
+@media (min-width: 280px) and (max-width: 1220px) {
+  .block {
+    flex-direction: column;
+  }
+}
+
 .infoBlock {
-  width: 695px;
+  width: 670px;
+}
+
+@media (min-width: 280px) and (max-width: 1220px) {
+  .infoBlock {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .info {
-  color: var(--main-color);
+  color: var(--dark-color);
   font-size: 18px;
   font-weight: 300;
+  line-height: 24px;
 }
 
 .name {
-  color: var(--main-color);
+  color: var(--dark-color);
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 20px;
 }
 
-.imageWrapper {
-  width: 320px;
-  position: relative;
+@media (min-width: 280px) and (max-width: 1220px) {
+  .name {
+    margin: 0;
+    font-size: 18px;
+  }
 }
 
 .image {
-  object-fit: cover;
+  box-shadow: 35px -16px var(--tinted-color);
+  margin-right: 35px;
 }
+
+@media (min-width: 280px) and (max-width: 1220px) {
+  .image {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inherit;
+  }
+}
+
