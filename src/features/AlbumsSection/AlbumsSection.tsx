@@ -1,31 +1,38 @@
 import Link from "next/link";
 import React from "react";
-import { Image } from "../../components/Image";
 import { Title } from "../../components/Title";
-import { albums } from "../../constants";
-import { ALBOM_PAGE } from "../../routs";
+import { urlFor } from "../../lib/client";
+import { ALBUM_PAGE } from "../../routs";
 
 import styles from "./AlbumsSection.module.css";
+interface Props {
+  photos: [
+    {
+      _id: number;
+      preview: string;
+      title: string;
+    }
+  ];
+}
 
-export const AlbumsSection = () => {
+export const AlbumsSection = ({ photos }: Props) => {
   return (
     <>
       <Title name="Альбомы" />
-      <Link href={ALBOM_PAGE}>
-        <div className={styles.container}>
-          {albums.map((item) => (
-            <div key={item.text}>
-              <Image
-                imageClassName={styles.image}
-                className={styles.imageWrapper}
-                image={item.photo}
+      <div className={styles.container}>
+        {photos.map((item) => (
+          <Link href={`${ALBUM_PAGE}/${item._id}`} key={item._id}>
+            <div className={styles.imageWrapper}>
+              <img
+                className={styles.image}
+                src={urlFor(item.preview).height(200).width(200).url()}
                 alt="img"
               />
-              <p className={styles.text}>{item.text}</p>
+              <p className={styles.text}>{item.title}</p>
             </div>
-          ))}
-        </div>
-      </Link>
+          </Link>
+        ))}
+      </div>
     </>
   );
 };

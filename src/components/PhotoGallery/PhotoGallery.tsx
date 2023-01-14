@@ -2,8 +2,10 @@ import { useState, useCallback } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Gallery, { PhotoProps } from "react-photo-gallery";
 
+import styles from "./PhotoGallery.module.css";
+
 interface Props {
-  photos: { src: string; width: number; height: number; id: string }[];
+  photos: { src: string; width: number; height: number }[];
 }
 
 interface PhotoForGallery {
@@ -32,7 +34,9 @@ export const PhotoGallery = ({ photos }: Props) => {
 
   return (
     <>
-      <Gallery photos={photos} onClick={openLightBox} direction="row" />
+      <div className={styles.gallery}>
+        <Gallery photos={photos} onClick={openLightBox} direction="row" />
+      </div>
       <ModalGateway>
         {isViewerOpen ? (
           <Modal onClose={closeLightBox}>

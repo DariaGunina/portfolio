@@ -1,10 +1,9 @@
-import { StaticImageData } from "next/image";
+import { ImageProps } from "next/image";
 import DefaultImage from "next/image";
 
-interface IProps {
-  image: StaticImageData;
-  alt?: string;
+interface IProps extends ImageProps {
   className?: string;
+  image: string;
   imageClassName?: string;
 }
 

@@ -1,23 +1,27 @@
 import Link from "next/link";
 import { PhotoGallery } from "../../components/PhotoGallery";
-import { Header } from "../Header";
-import { photos } from "../../constants";
 import ArrowIcon from "../../assets/arrow.svg";
 import { HOME } from "../../routs";
+import { photosGalleryAdapter } from "../../utils/utils";
 
 import styles from "./Album.module.css";
 
-export const Album = () => {
+interface Props {
+  photos: [];
+}
+
+export const Album = ({ photos }: Props) => {
+  const images = photosGalleryAdapter(photos);
+
   return (
     <div className={styles.container}>
-      <Header />
       <Link href={HOME}>
         <div className={styles.box}>
           <ArrowIcon className={styles.icon} />
           <p className={styles.name}>На главную</p>
         </div>
       </Link>
-      <PhotoGallery photos={photos} />
+      <PhotoGallery photos={images} />
     </div>
   );
 };

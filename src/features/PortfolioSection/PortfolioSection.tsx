@@ -1,13 +1,18 @@
-import { useState, useCallback } from "react";
 import { PhotoGallery } from "../../components/PhotoGallery";
 import { Title } from "../../components/Title";
-import { photos } from "../../constants";
+import { photosGalleryAdapter } from "../../utils/utils";
 
-export const PortfolioSection = () => {
+interface Props {
+  gallery: [];
+}
+
+export const PortfolioSection = ({ gallery }: Props) => {
+  const images = photosGalleryAdapter(gallery);
+
   return (
     <>
       <Title name="Фото" />
-      <PhotoGallery photos={photos} />
+      <PhotoGallery photos={images} />
     </>
   );
 };

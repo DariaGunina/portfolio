@@ -5,7 +5,6 @@ import photo4 from "./assets/photo4.jpg";
 import photo5 from "./assets/photo5.jpg";
 import photo6 from "./assets/photo6.jpg";
 
-
 export const photos = [
   {
     src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
