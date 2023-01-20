@@ -1,28 +1,12 @@
 import { Album } from "../../features/Album";
 import { Footer } from "../../features/Footer";
 import { Header } from "../../features/Header";
+import { IInformation } from "../../interface";
 import { client } from "../../lib/client";
 
 interface Props {
   photos: [];
-  information: [
-    {
-      phone: string;
-      greetings: string;
-      textGreetings: string;
-      selfRepresentation: string;
-      mail: string;
-      steps: [
-        {
-          title: string;
-          text: string;
-          key: number;
-        }
-      ];
-      city: string;
-      region: string;
-    }
-  ];
+  information: IInformation[];
 }
 
 const AlbumPage = ({ photos, information }: Props) => {

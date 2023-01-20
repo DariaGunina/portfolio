@@ -5,7 +5,10 @@ import Gallery, { PhotoProps } from "react-photo-gallery";
 import styles from "./PhotoGallery.module.css";
 
 interface Props {
-  photos: { src: string; width: number; height: number }[];
+  photos: {
+    urlsPreview: PhotoProps[];
+    urlsFull: PhotoProps[];
+  };
 }
 
 interface PhotoForGallery {
@@ -35,14 +38,19 @@ export const PhotoGallery = ({ photos }: Props) => {
   return (
     <>
       <div className={styles.gallery}>
-        <Gallery photos={photos} onClick={openLightBox} direction="row" />
+        <Gallery
+          photos={photos.urlsPreview}
+          onClick={openLightBox}
+          direction="row"
+        />
       </div>
+      {/* @ts-ignore */}
       <ModalGateway>
         {isViewerOpen ? (
           <Modal onClose={closeLightBox}>
             <Carousel
               currentIndex={currentImageId}
-              views={photos.map((x) => ({
+              views={photos.urlsFull.map((x) => ({
                 source: x.src,
               }))}
             />

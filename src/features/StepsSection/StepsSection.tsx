@@ -2,21 +2,12 @@ import Image from "next/image";
 import { Title } from "../../components/Title";
 import { Step } from "../Step";
 import ImageCamera from "../../assets/camera.jpg";
+import { IInformation } from "../../interface";
 
 import styles from "./StepsSection.module.css";
 
 interface Props {
-  information: [
-    {
-      steps: [
-        {
-          title: string;
-          text: string;
-          key: number;
-        }
-      ];
-    }
-  ];
+  information: IInformation[];
 }
 
 export const StepsSection = ({ information }: Props) => {

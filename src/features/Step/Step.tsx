@@ -1,5 +1,4 @@
 import styles from "./Step.module.css";
-import CheckImage from "../../assets/check.svg";
 
 interface Props {
   title: string;

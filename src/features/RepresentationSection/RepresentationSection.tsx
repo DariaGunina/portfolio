@@ -2,18 +2,12 @@ import { Title } from "../../components/Title";
 import avatar from "../../assets/avatar.jpg";
 import { ContactsSection } from "../ContactsSection";
 import Image from "next/image";
+import { IInformation } from "../../interface";
 
 import styles from "./RepresentationSection.module.css";
 
 interface Props {
-  information: [
-    {
-      greetings: string;
-      textGreetings: string;
-      phone: string;
-      selfRepresentation: string;
-    }
-  ];
+  information: IInformation[];
 }
 
 export const RepresentationSection = ({ information }: Props) => {

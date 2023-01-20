@@ -35,7 +35,7 @@
 }
 
 .image {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 10;
   grid-row: 1; 
   padding-top: 20%;
   pointer-events: none;

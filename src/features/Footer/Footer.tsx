@@ -1,18 +1,12 @@
 import { GroupIcons } from "../GroupIcons";
 import { Contact } from "../Contact";
 import CopyrightImage from "../../assets/copyright.svg";
+import { IInformation } from "../../interface";
 
 import styles from "./Footer.module.css";
 
 interface Props {
-  information: [
-    {
-      phone: string;
-      mail: string;
-      city: string;
-      region: string;
-    }
-  ];
+  information: IInformation[];
 }
 
 export const Footer = ({ information }: Props) => {
