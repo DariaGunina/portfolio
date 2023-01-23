@@ -2,28 +2,12 @@ import { Home } from "../features/Home";
 import { client } from "../lib/client";
 import { Header } from "../features/Header";
 import { Footer } from "../features/Footer/Footer";
+import { IImage, IInformation, IPhoto } from "../interface";
 
 interface Props {
-  photos: [{ _id: number; preview: string; title: string }];
-  gallery: [];
-  information: [
-    {
-      phone: string;
-      greetings: string;
-      textGreetings: string;
-      selfRepresentation: string;
-      mail: string;
-      steps: [
-        {
-          title: string;
-          text: string;
-          key: number;
-        }
-      ];
-      city: string;
-      region: string;
-    }
-  ];
+  photos: IPhoto[];
+  gallery: IImage[];
+  information: IInformation[];
 }
 
 const App = ({ photos, gallery, information }: Props) => (

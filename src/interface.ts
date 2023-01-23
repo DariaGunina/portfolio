@@ -17,6 +17,7 @@ export interface IInformation {
 };
 
 export interface IImage {
+  images: any;
   asset: object;
   _key: string;
   _type: string;

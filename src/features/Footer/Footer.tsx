@@ -12,9 +12,9 @@ interface Props {
 export const Footer = ({ information }: Props) => {
   return (
     <div className={styles.container}>
-      {information.map((item) => {
+      {information.map((item, index) => {
         return (
-          <>
+          <div key={index}>
             <div className={styles.info}>
               <div className={styles.box}>
                 <p className={styles.title}>Контактная информация</p>
@@ -37,7 +37,7 @@ export const Footer = ({ information }: Props) => {
                 2022 Created by Daria Gunina
               </p>
             </div>
-          </>
+          </div>
         );
       })}
     </div>

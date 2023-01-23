@@ -10,7 +10,7 @@ interface Props {
 export const Contact = ({ isDifferentText, phone }: Props) => {
   return (
     <a
-      href="tel:89375679999"
+      href="tel:89954221407"
       className={cx(styles.text, {
         [styles.differentText]: isDifferentText,
       })}

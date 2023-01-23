@@ -1,11 +1,11 @@
 import { Album } from "../../features/Album";
 import { Footer } from "../../features/Footer";
 import { Header } from "../../features/Header";
-import { IInformation } from "../../interface";
+import { IImage, IInformation } from "../../interface";
 import { client } from "../../lib/client";
 
 interface Props {
-  photos: [];
+  photos: IImage[];
   information: IInformation[];
 }
 

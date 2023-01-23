@@ -25,10 +25,10 @@ export const StepsSection = ({ information }: Props) => {
             {steps.map((item, i) => {
               return (
                 <Step
-                  key={item.key}
                   step={i + 1}
                   title={item.title}
                   text={item.text}
+                  key={i}
                 />
               );
             })}

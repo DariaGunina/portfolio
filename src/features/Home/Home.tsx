@@ -13,7 +13,6 @@ interface Props {
 }
 
 export const Home = ({ photos, gallery, information }: Props) => {
-  console.log(gallery, "1");
   return (
     <div className={styles.container}>
       <RepresentationSection information={information} />
