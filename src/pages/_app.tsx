@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Фотограф Фото Фотосессия Урюпинск | Beleva.ru </title>
+        <title>Фотограф Урюпинск | Beleva.ru </title>
         <meta
           name="description"
           content="Профессиональный фотограф из Урюпинска - Виктория Белева. Провожу индивидуальные, семейные, детские, свадебные фотосессии. Звоните по телефону +7(995)4221407"

@@ -50,9 +50,9 @@ export const PhotoGallery = ({ photos }: Props) => {
           <Modal onClose={closeLightBox}>
             <Carousel
               currentIndex={currentImageId}
-              views={photos.urlsFull.map((x, i) => ({
-                source: x.src,
-                key: { i },
+              views={photos.urlsFull.map((photo, index) => ({
+                source: photo.src,
+                key: { index },
               }))}
             />
           </Modal>
