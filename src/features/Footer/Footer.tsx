@@ -1,26 +1,20 @@
 import { GroupIcons } from "../GroupIcons";
 import { Contact } from "../Contact";
 import CopyrightImage from "../../assets/copyright.svg";
+import { IInformation } from "../../interface";
 
 import styles from "./Footer.module.css";
 
 interface Props {
-  information: [
-    {
-      phone: string;
-      mail: string;
-      city: string;
-      region: string;
-    }
-  ];
+  information: IInformation[];
 }
 
 export const Footer = ({ information }: Props) => {
   return (
     <div className={styles.container}>
-      {information.map((item) => {
+      {information.map((item, index) => {
         return (
-          <>
+          <div key={index}>
             <div className={styles.info}>
               <div className={styles.box}>
                 <p className={styles.title}>Контактная информация</p>
@@ -43,7 +37,7 @@ export const Footer = ({ information }: Props) => {
                 2022 Created by Daria Gunina
               </p>
             </div>
-          </>
+          </div>
         );
       })}
     </div>

@@ -1,27 +1,21 @@
+import Image from "next/image";
 import { Title } from "../../components/Title";
 import avatar from "../../assets/avatar.jpg";
 import { ContactsSection } from "../ContactsSection";
-import Image from "next/image";
+import { IInformation } from "../../interface";
 
 import styles from "./RepresentationSection.module.css";
 
 interface Props {
-  information: [
-    {
-      greetings: string;
-      textGreetings: string;
-      phone: string;
-      selfRepresentation: string;
-    }
-  ];
+  information: IInformation[];
 }
 
 export const RepresentationSection = ({ information }: Props) => {
   return (
     <>
-      {information.map((item) => {
+      {information.map((item, index) => {
         return (
-          <>
+          <div key={index}>
             <div className={styles.container}>
               <div className={styles.content}>
                 <p className={styles.title}>{item.greetings}</p>
@@ -39,7 +33,7 @@ export const RepresentationSection = ({ information }: Props) => {
                 <Image width={400} height={600} src={avatar} alt="img" />
               </div>
             </div>
-          </>
+          </div>
         );
       })}
     </>

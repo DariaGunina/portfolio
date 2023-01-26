@@ -12,7 +12,8 @@
 
 @media (min-width: 280px) and (max-width: 1220px) {
   .info {
-    flex-direction: column;
+    grid-template-columns: inherit;
+    justify-content: center;
   }
 }
 
@@ -38,7 +39,7 @@
 
 @media (min-width: 280px) and (max-width: 1220px) {
   .title {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -52,7 +53,7 @@
 
 @media (min-width: 280px) and (max-width: 1220px) {
   .text {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
