@@ -1,22 +1,20 @@
 .container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
 }
 
 @media (min-width: 280px) and (max-width: 800px) {
   .container {
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
 }
 
 .text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: var(--dark-color);
   font-size: 16px;
   font-weight: 200;
+  text-align: center;
 }
 
 @media (min-width: 280px) and (max-width: 800px) {
@@ -30,16 +28,6 @@
   height: auto;
   object-fit: cover;
   cursor: pointer;
-}
-
-.imageWrapper {
-  width: 100%;
-}
-
-@media (min-width: 280px) and (max-width: 800px) {
-  .imageWrapper {
-    margin-right: 0;
-  }
 }
 
 
