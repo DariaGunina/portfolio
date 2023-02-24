@@ -10,6 +10,8 @@ interface Props {
 }
 
 export const Footer = ({ information }: Props) => {
+  const today = new Date();
+  const year = today.getFullYear();
   return (
     <div className={styles.container}>
       {information.map((item, index) => {
@@ -33,9 +35,13 @@ export const Footer = ({ information }: Props) => {
             </div>
             <div className={styles.copyright}>
               <CopyrightImage className={styles.copyrightImage} />
-              <p className={styles.copyrightText}>
-                2022 Created by Daria Gunina
-              </p>
+              <p className={styles.copyrightYear}>{year}</p>
+              <a
+                className={styles.copyrightText}
+                href="https://github.com/DariaGunina/portfolio"
+              >
+                Created by Daria Gunina
+              </a>
             </div>
           </div>
         );

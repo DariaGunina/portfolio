@@ -31,6 +31,7 @@ export const RepresentationSection = ({ information }: Props) => {
               </div>
               <div className={styles.image}>
                 <Image width={400} height={600} src={avatar} alt="img" />
+                <p className={styles.captionPhoto}>С любовью ...</p>
               </div>
             </div>
           </div>
