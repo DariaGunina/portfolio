@@ -76,12 +76,20 @@
 
 .copyrightImage {
   width: 11px;
-  height: 11px;
+  height: 14px;
   fill: var(--dark-color);
   font-weight: 200;
-  margin-right: 5px;
+  margin-right: 2px;
+}
+
+.copyrightYear {
+  margin: 0 5px 0;
 }
 
 .copyrightText {
-  margin: 0;
+  border-bottom: 1px solid var(--light-border-color);
+}
+
+.copyrightText:hover {
+  color: var(--icon-color);
 }

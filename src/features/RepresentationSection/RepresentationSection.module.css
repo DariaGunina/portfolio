@@ -95,6 +95,17 @@
   font-size: 18px;
   font-weight: 300;
   line-height: 24px;
+  white-space: pre-line;
+}
+
+.captionPhoto {
+  color: var(--dark-color);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .name {
@@ -111,15 +122,14 @@
 }
 
 .image {
-  box-shadow: 35px -16px var(--tinted-color);
-  margin-right: 35px;
+  padding: 20px;
+  box-shadow: 0 0px 4px 0px rgb(0 0 0 / 26%);
 }
 
 @media (min-width: 280px) and (max-width: 1220px) {
   .image {
     margin-left: auto;
     margin-right: auto;
-    box-shadow: inherit;
   }
 }
 
