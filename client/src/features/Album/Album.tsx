@@ -12,7 +12,7 @@ interface Props {
 }
 
 export const Album = ({ photos }: Props) => {
-  const images = photosGalleryAdapter(photos);
+  const { urlsPreview, urlsFull } = photosGalleryAdapter(photos);
 
   return (
     <div className={styles.container}>
@@ -22,7 +22,7 @@ export const Album = ({ photos }: Props) => {
           <p className={styles.name}>На главную</p>
         </div>
       </Link>
-      <PhotoGallery photos={images} />
+      <PhotoGallery urlsPreview={urlsPreview} urlsFull={urlsFull} />
     </div>
   );
 };

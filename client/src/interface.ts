@@ -1,4 +1,5 @@
 export interface IPhoto { _id: number; preview: string; title: string };
+
 export interface IInformation {
   phone: string;
   greetings: string;
