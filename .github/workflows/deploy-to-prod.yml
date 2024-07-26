@@ -21,7 +21,3 @@ jobs:
         rm: true
         source: "./client/*"
         target: ${{ secrets.SERVER_PATH }}
-        script: |
-          cd ${{ secrets.SERVER_PATH }}
-          npm run dev:docker
-          pm2 restart portfolio
