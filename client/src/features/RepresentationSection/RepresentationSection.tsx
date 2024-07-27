@@ -26,7 +26,7 @@ export const RepresentationSection = ({ information }: Props) => {
             <Title name="Обо мне" />
             <div className={styles.block}>
               <div className={styles.infoBlock}>
-                <p className={styles.name}>Несколько слов обо мне</p>
+                <p className={styles.name}>Привет!</p>
                 <p className={styles.info}>{item.selfRepresentation}</p>
               </div>
               <div className={styles.image}>
