@@ -21,8 +21,4 @@ jobs:
         rm: true
         source: "./client/*"
         target: ${{ secrets.SERVER_PATH }}
-        script: |
-          cd ${{ secrets.MAIN_PROJECT_PATH }}/client
-          pm2 stop 0
-          pm2 delete 0
-          pm2 start "npm docker" --name beleva
+        script: cd /var/www/beleva/client && pm2 stop 0 && pm2 delete 0 && pm2 start "npm run docker" --name beleva
