@@ -5,8 +5,8 @@
   "scripts": {
     "docker": "docker compose up",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "npx next build",
+    "start": "npx next start",
     "prod": "npm run build && npm run start",
     "lint": "next lint"
   },
